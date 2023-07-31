@@ -33,7 +33,7 @@ export const NavDrawer = (ps: DrawerProps) => (
             
             <List>
                 {ps.navItems.map((item) => (
-                <ListItem key={item} disablePadding component={Link} to={ps.path[item]}>
+                <ListItem key={item} disablePadding component={Link} to={ps.path[item]} sx={{color:'inherit'}}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                     <ListItemText primary={item} />
                     </ListItemButton>
