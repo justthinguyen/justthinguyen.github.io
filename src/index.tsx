@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
+import App from './App';
 
 import './index.css';
 
@@ -11,7 +12,7 @@ const Root = (ps: props ) => (<div>HI THERE! We are in {ps.page}</div>);
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Home />} errorElement={<ErrorPage />}>
+    <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="/coding" element={<Root page="Coding" />} />
       <Route path="/blog" element={<Root page="Blog" />} />
       <Route path="/resume" element={<Root page="Resume" />} />
