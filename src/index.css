@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "DomaineText",Georgia,serif;
+  font-family: 'DomaineText',Georgia,serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #1d2547;
@@ -19,5 +19,7 @@ code {
 #error-page h1 {
     font-size: 3.2em;
     line-height: 1.1;
-  }
-  
+}
+.top-bar a.active,.nav-drawer a.active {
+    text-decoration: underline;
+}
