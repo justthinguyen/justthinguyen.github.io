@@ -1,12 +1,10 @@
 import * as React from 'react';
-import {
-  AppBar, Box, Button, CssBaseline, IconButton, Toolbar, Typography
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-
+import { Box, CssBaseline, Toolbar, Typography } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { Link, Outlet } from 'react-router-dom';
-import { NavDrawer, PlainNavLink } from './components/Navigation';
+import { Outlet } from 'react-router-dom';
+import { NavDrawer } from './components/Navigation';
+import { TopBar } from './components/Bars';
+
 import theme from './Theme';
 
 type PagePaths = { [key: string]: string; };
@@ -17,7 +15,7 @@ const pages: PagePaths = {
   'Contact': '/contact'
 };
 const navItems = Object.keys(pages);
-const brand = 'THI NGUYEN';
+const brand = 'THI';
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -30,34 +28,12 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar component="nav" color="primary">
-          <Toolbar>
-            <IconButton color="inherit" aria-label="open drawer" edge="start"
-              onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div"
-              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }}}
-            >
-              <PlainNavLink to="/">{brand}</PlainNavLink>
-            </Typography>
-
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <Link to={pages[item]}>
-                  <Button key={item} color='secondary'>
-                    {item}
-                  </Button>
-                </Link>
-              ))}
-            </Box>
-          </Toolbar>
-        </AppBar>
+        <TopBar className='top-bar' header={brand} handleDrawerToggle={handleDrawerToggle}
+          navItems={navItems} path={pages} ></TopBar>
         <Box component="nav">
           <NavDrawer 
-              header={brand} handleDrawerToggle={handleDrawerToggle} 
-              navItems={navItems} path={pages} open={mobileOpen} width={240} />
+            header={brand} handleDrawerToggle={handleDrawerToggle}
+            navItems={navItems} path={pages} open={mobileOpen} width={240} />
         </Box>
         <Box component="main" sx={{ p: 3 }}>
           <Toolbar />
