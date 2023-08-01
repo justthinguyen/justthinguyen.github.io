@@ -1,11 +1,19 @@
 import { Box, Divider, Drawer, Link as MUILink, LinkProps, 
     List, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material';
+import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 
 export const NavLink: React.FC<LinkProps<typeof Link>> = (ps) => <MUILink component={Link} {...ps}> {ps.children} </MUILink>;
 
+export const PlainNavLink = styled(NavLink)({
+    color:'inherit', 
+    'text-decoration':'none',
+    ':hover': { 'text-decoration':'none', 'font-size': 'larger'}
+});
+  
 interface DrawerProps {
     header?: string;
+    headerPath?: string;
     open?: boolean;
 	handleDrawerToggle: () => void;
     navItems: string[];
@@ -27,7 +35,9 @@ export const NavDrawer = (ps: DrawerProps) => (
         }}>
         <Box onClick={ps.handleDrawerToggle} sx={{ textAlign: 'center' }}>
             {ps.header ? 
-            <><Typography variant="h6" sx={{ my: 2 }}>{ps.header}</Typography>
+            <><Typography variant="h6" sx={{ my: 2 }}>
+                <PlainNavLink to={ps.headerPath ?? ''}>{ps.header}</PlainNavLink>
+            </Typography>
             <Divider /></> 
             : <></> }
             

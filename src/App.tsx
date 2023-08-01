@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { Link, Outlet } from 'react-router-dom';
-import { NavDrawer } from './components/Navigation';
+import { NavDrawer, PlainNavLink } from './components/Navigation';
 import theme from './Theme';
 
 type PagePaths = { [key: string]: string; };
@@ -32,21 +32,15 @@ export default function App() {
         <CssBaseline />
         <AppBar component="nav" color="primary">
           <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+            <IconButton color="inherit" aria-label="open drawer" edge="start"
+              onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
+            <Typography variant="h6" component="div"
               sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }}}
             >
-              {brand}
+              <PlainNavLink to="/">{brand}</PlainNavLink>
             </Typography>
 
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
