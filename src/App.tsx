@@ -31,7 +31,7 @@ export default function App() {
         <TopBar className='top-bar' header={brand} handleDrawerToggle={handleDrawerToggle}
           navItems={navItems} path={pages} ></TopBar>
         <Box component="nav">
-          <NavDrawer 
+          <NavDrawer className='nav-drawer'
             header={brand} handleDrawerToggle={handleDrawerToggle}
             navItems={navItems} path={pages} open={mobileOpen} width={240} />
         </Box>

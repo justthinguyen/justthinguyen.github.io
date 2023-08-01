@@ -1,17 +1,18 @@
-import { Box, Divider, Drawer, Link as MUILink, LinkProps, 
+import { Box, Divider, Drawer, DrawerProps, Link as MUILink, LinkProps, 
     List, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material';
 import { styled } from '@mui/system';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export const NavLink: React.FC<LinkProps<typeof Link>> = (ps) => <MUILink component={Link} {...ps}> {ps.children} </MUILink>;
+export const RouterLink: React.FC<LinkProps<typeof NavLink>> = (ps) => 
+    <MUILink component={NavLink} {...ps}> {ps.children} </MUILink>;
 
-export const PlainNavLink = styled(NavLink)({
+export const PlainNavLink = styled(RouterLink)({
     color:'inherit', 
     'text-decoration':'none',
-    ':hover': { 'text-decoration':'none', 'font-size': 'larger'}
+    ':hover': { 'text-decoration':'none', 'font-size': 'larger'},
 });
   
-interface DrawerProps {
+interface IDrawerProps extends DrawerProps {
     header?: string;
     headerPath?: string;
     open?: boolean;
@@ -21,8 +22,8 @@ interface DrawerProps {
     width?: number;
 
 }
-export const NavDrawer = (ps: DrawerProps) => (
-    <Drawer
+export const NavDrawer = (ps: IDrawerProps) => (
+    <Drawer className={ps.className}
         variant="temporary"
         open={ps.open || false}
         onClose={ps.handleDrawerToggle}
@@ -35,7 +36,7 @@ export const NavDrawer = (ps: DrawerProps) => (
         }}>
         <Box onClick={ps.handleDrawerToggle} sx={{ textAlign: 'center' }}>
             {ps.header ? 
-            <><Typography variant="h6" sx={{ my: 2 }}>
+            <><Typography variant="h5" sx={{ my: 2 }}>
                 <PlainNavLink to={ps.headerPath ?? ''}>{ps.header}</PlainNavLink>
             </Typography>
             <Divider /></> 
@@ -43,9 +44,9 @@ export const NavDrawer = (ps: DrawerProps) => (
             
             <List>
                 {ps.navItems.map((item) => (
-                <ListItem key={item} disablePadding component={Link} to={ps.path[item]} sx={{color:'inherit'}}>
+                <ListItem key={item} disablePadding component={NavLink} to={ps.path[item]} sx={{color:'inherit'}}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
-                    <ListItemText primary={item} />
+                        <ListItemText primary={item} />
                     </ListItemButton>
                 </ListItem>
                 ))}
