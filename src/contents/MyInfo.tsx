@@ -1,4 +1,7 @@
 import { Typography } from '@mui/material';
+import { RouterLink } from '../components/Navigation';
+import { pages } from '../siteInfo';
+
 
 export const Intro = () => (
     <Typography>
@@ -9,20 +12,20 @@ export const Intro = () => (
         </p>
         <p>
             Sometimes, I love creating software to solve problems and improve daily efficiency for myself and others. I'm also passionate about learning and sharing my knowledge.
-            Recently, I discovered my love for building ReactJS, TypeScript applications, and I'm working a couple projects with these two technologies, as well as writing tutorials to share what I learn.
+            Recently, I discovered my love for building ReactJS, TypeScript applications, and I'm working on a couple projects involving these two technologies, as well as writing tutorials to share what I learn.
         </p>
 
         <p>
             At other times, I enjoy being active and spending time outdoors, reading, traveling, and exploring new places.
-            Besides work, I think life offers so many meaningful and exciting experiences! Therefore, if this site appears to be outdated, please don’t think of me as a slacker (although I could be sometimes),
+            Besides work, I think life offers so many meaningful and exciting experiences! Therefore, if this site appears to be outdated, <b>please do not think of me as a slacker </b>(although I could be sometimes...),
             as I might be somewhere enjoying a beautiful hike or bike ride, running, doing yoga, playing volleyball, reading a good book, practicing guitar, volunteering, or spending quality time with my family and friends.
             I really do take physical and mental health seriously, as well as work - life balance! 😁
         </p>
 
         <p>
-            On this site, I hope you can find something useful about programming in my Coding page.
-            And occasionally, I might attempt to write about other topics that interest me in my Blog,
-            such as living frugally, travel and travel hacking, side hustling, climate change and conservation, and lessons I've learned in building the life I love.
+            On this site, I hope you can find something useful about programming in <RouterLink to={pages['Coding']}>Coding</RouterLink> section.
+            And occasionally, I will attempt to share about other topics that interest me in my <RouterLink to={pages['Blog']}>Blog</RouterLink> ,
+            such as living frugally, travel and travel hacking, side hustling, climate change and conservation, and lessons I learn from building the life I love.
         </p>
 
         <p>

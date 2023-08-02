@@ -8,7 +8,7 @@ import App from './App';
 import './index.css';
 
 interface props { page?: string }
-const Root = (ps: props) => (<div>HI THERE! We are in {ps.page}</div>);
+const Root = (ps: props) => (<div><h2>Hi there!</h2> Nothing in {ps.page} yet, but Thi is diligently working on this. Please stay tune! </div>);
 
 const router = createBrowserRouter(
     createRoutesFromElements(

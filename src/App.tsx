@@ -8,18 +8,9 @@ import { ColorModeButton } from './components/ColorModeButton';
 
 import { lightTheme, darkTheme } from './Theme';
 import { PaletteMode } from '@mui/material';
+import { brand, navItems, pages } from './siteInfo';
 
 const ThemeContext = createContext('light');
-
-type PagePaths = { [key: string]: string; };
-const pages: PagePaths = {
-    'Coding': '/coding',
-    'Blog': '/blog',
-    'Resume': '/resume',
-    'Contact': '/contact'
-};
-const navItems = Object.keys(pages);
-const brand = 'THI';
 
 export default function App() {
     const [themeColor, setThemeColor] = useState<PaletteMode>('light');
