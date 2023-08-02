@@ -1,23 +1,36 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { PaletteMode } from '@mui/material';
 
+const themeOptions = (mode: PaletteMode): ThemeOptions =>
+({
+    palette: {
+        mode: mode,
+        primary: {
+            main: '#9a2351',
+            contrastText: '#ffebec',
+        },
+        secondary: {
+            main: '#ffebec',
+            contrastText: '#1d2547',
+        },
+        ...(mode === 'dark' && {
+            text: {
+                primary: '#ffebee', //'#ffcdd2',
+            }
+        }),
+        ...(mode === 'light' && {
+            background: {
+                default: '#ffebee',
+                paper: '#fff',
+            }
+        }),
 
-const themeOptions: ThemeOptions = {
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#9a2351',
-      contrastText: '#ffebec',
     },
-    secondary: {
-      main: '#ffebec',
-      contrastText: '#1d2547',
-    },
-  },
-  typography: {
-    fontFamily: '"DomaineText",Georgia,serif',
-  },
-};
+    typography: {
+        fontFamily: 'Montserrat, Droid Sans, Roboto'//'"DomaineText",Georgia,serif',
+    }
+});
 
-const theme = createTheme(themeOptions);
 
-export default theme;
+export const lightTheme = createTheme(themeOptions('light'));
+export const darkTheme = createTheme(themeOptions('dark'));
