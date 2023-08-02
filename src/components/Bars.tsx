@@ -34,6 +34,7 @@ export const TopBar = (ps: BarProps) => {
                         </Button>
                     ))}
                 </Box>
+                {ps.children}
             </Toolbar>
         </AppBar>
     )
