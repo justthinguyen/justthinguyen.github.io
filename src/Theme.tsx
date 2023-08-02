@@ -13,15 +13,20 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
             main: '#ffebec',
             contrastText: '#1d2547',
         },
-        ...(mode === 'dark' && {
+        ...(mode === 'dark' ? {
             text: {
                 primary: '#ffebee', //'#ffcdd2',
+            }
+        } : {
+            text: {
+                primary: '#1d2547', //'#ffcdd2',
+                // secondary: '#ffebec'
             }
         }),
         ...(mode === 'light' && {
             background: {
-                default: '#ffebee',
-                paper: '#fff',
+                default: '#fff',
+                paper: '#ffebec',
             }
         }),
 

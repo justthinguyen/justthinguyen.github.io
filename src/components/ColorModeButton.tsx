@@ -11,7 +11,7 @@ export const ColorModeButton = (ps: BtnProps) => {
     return (
         <IconButton
             sx={{
-                ml: 1, bgcolor: 'background.default',
+                ml: 1, bgcolor: 'background.paper',
                 color: 'text.primary'
             }}
             onClick={ps.toggleColorMode} color="inherit">
