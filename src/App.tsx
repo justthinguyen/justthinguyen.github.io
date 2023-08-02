@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { Box, CssBaseline, Toolbar, Typography } from '@mui/material';
+import { Box, CssBaseline, Toolbar } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
 import { NavDrawer } from './components/Navigation';
@@ -46,11 +46,9 @@ export default function App() {
                             header={brand} handleDrawerToggle={handleDrawerToggle}
                             navItems={navItems} path={pages} open={mobileOpen} width={240} />
                     </Box>
-                    <Box component="main" sx={{ p: 3 }}>
+                    <Box component="main" sx={{ p: 3, flexGrow: 1 }}>
                         <Toolbar />
-                        <Typography>
-                            <Outlet></Outlet>
-                        </Typography>
+                        <Outlet></Outlet>
                     </Box>
 
                 </Box>
