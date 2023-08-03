@@ -14,9 +14,9 @@ export default function Home() {
                     className="Thi-profile-pic"
                     component="img"
                     sx={{
-                        maxHeight: { xs: '90%', md: '100%' },
+                        maxHeight: { xs: '80%', md: '60%' },
                         maxWidth: { xs: '90%', md: '100%' },
-                        marginTop: { xs: '0', md: '5%', lg: '10%' },
+                        marginTop: { xs: '0', md: '10%', lg: '10%' },
                         borderRadius: '5%'
                     }}
                     alt="ThiNguyen-profile-pic"
