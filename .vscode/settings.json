@@ -1,0 +1,12 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true 
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "editor.detectIndentation": false,
+    "workbench.editor.closeEmptyGroups": false,
+    "editor.autoIndent": "full"
+}
