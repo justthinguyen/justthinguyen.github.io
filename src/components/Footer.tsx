@@ -29,8 +29,8 @@ const MediaButton = (ps: LinkProps) => (
 export const Footer = () =>
 (<BottomPaper className='footer'>
     <Typography component="div" sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}>
-        <MediaButton href={mediaLink['Github']} title='Go to my Github'><GitHubIcon /></MediaButton>
-        <MediaButton href={mediaLink['LinkedIn']} title='Go to my LinkedIn'><LinkedInIcon sx={{ fontSize: '1.8rem' }} /></MediaButton>
+        <MediaButton href={mediaLink['Github']} title='Visit my Github'><GitHubIcon /></MediaButton>
+        <MediaButton href={mediaLink['LinkedIn']} title='Visit my LinkedIn'><LinkedInIcon sx={{ fontSize: '1.8rem' }} /></MediaButton>
         <MediaButton href={mediaLink['EmailMe']} title='Send me an email'><EmailIcon sx={{ fontSize: '1.7rem' }} /></MediaButton>
         <br />
         © 2023. Thi Nguyen
