@@ -5,7 +5,7 @@ export type PageInfo = {
     path: string;
 };
 export const pagesKey: { [key: string]: PageInfo; } = {
-    'coding': { name: 'Coding Resourses', path: '/coding' },
+    'coding': { name: 'Coding Resources', path: '/coding' },
     'blog': { name: 'Blog', path: '/blog' },
     'resume': { name: 'Resume', path: '/resume' },
     'work': { name: 'Work with Me', path: '/work-with-me' }

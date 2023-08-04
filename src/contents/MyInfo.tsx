@@ -12,7 +12,7 @@ export const Intro = () => (
         </p>
         <p>
             Sometimes, I love creating software to solve problems and improve daily efficiency for myself and others. I'm also passionate about learning and sharing my knowledge.
-            Recently, I discovered my love for building ReactJS, TypeScript applications, and I'm working on a couple projects involving these two technologies, as well as writing tutorials to share what I learn.
+            Recently, I discovered my love for building React.js, TypeScript applications, and I'm working on a couple projects involving these two technologies, as well as writing tutorials to share what I learn.
         </p>
 
         <p>
@@ -23,9 +23,9 @@ export const Intro = () => (
         </p>
 
         <p>
-            On this site, I hope you can find something useful about programming in <RouterLink to={pagesKey['coding']['path']}>{pagesKey['coding']['name']}.</RouterLink>
-            Occasionally, I will attempt to share about other topics that interest me in my <RouterLink to={pagesKey['blog']['path']}>{pagesKey['blog']['name']},</RouterLink>
-            such as active and frugal lifestyle, travel and travel hacking, side hustling, climate change and conservation, and things I learn from building the life I love.
+            On this site, I hope you can find something useful about building web applications with TypeScript, React.js or programming in general in <RouterLink to={pagesKey['coding']['path']}>{pagesKey['coding']['name']}</RouterLink>.
+            Occasionally, I will attempt to share about other topics that interest me in my <RouterLink to={pagesKey['blog']['path']}>{pagesKey['blog']['name']}</RouterLink>,
+            such as active and frugal lifestyle, travel and travel hacking, climate change and conservation, or things I learn from building the life I love.
         </p>
 
         <p>

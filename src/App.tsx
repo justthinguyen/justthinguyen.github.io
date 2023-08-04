@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
 import { NavDrawer } from './components/Navigation';
 import { TopBar } from './components/Bars';
+import { Footer } from './components/Footer';
 import { ColorModeButton } from './components/ColorModeButton';
 
 import { lightTheme, darkTheme } from './Theme';
@@ -41,8 +42,8 @@ export default function App() {
                         <Toolbar />
                         <Outlet></Outlet>
                     </Box>
-
                 </Box>
+                <Footer></Footer>
             </ThemeProvider>
         </ThemeContext.Provider>
     );
