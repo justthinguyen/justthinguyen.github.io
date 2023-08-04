@@ -2,6 +2,12 @@ import { Typography } from '@mui/material';
 import { RouterLink } from '../components/Navigation';
 import { pagesKey } from '../siteInfo';
 
+export const mediaLink = {
+    'Github': 'https://github.com/ngthing',
+    'LinkedIn': 'https://www.linkedin.com/in/ngthinguyen',
+    'EmailMe': 'mailto:thi@justthinguyen.com',
+    'Email': 'thi@justthinguyen.com'
+};
 
 export const Intro = () => (
     <Typography>
@@ -25,7 +31,7 @@ export const Intro = () => (
         <p>
             On this site, I hope you can find something useful about building web applications with TypeScript, React.js and programming in general in <RouterLink to={pagesKey['coding']['path']}>{pagesKey['coding']['name']}</RouterLink>.
             Occasionally, I will attempt to share about other topics that interest me in my <RouterLink to={pagesKey['blog']['path']}>{pagesKey['blog']['name']}</RouterLink>,
-            such as active and frugal lifestyle, travel and travel hacking, climate change and conservation, or things I learn from building the life I love.
+            such as active and frugal lifestyle, travel and travel hacking, climate change and conservation, or just random things I learn from building the life I love.
         </p>
 
         <p>
