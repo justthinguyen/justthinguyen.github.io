@@ -17,13 +17,13 @@ export const Intro = () => (
 
         <p>
             At other times, I enjoy being active and spending time outdoors, reading, traveling, and exploring new places.
-            Besides work, I think life offers so many meaningful and exciting experiences! Therefore, if this site appears to be outdated, <b>please do not think of me as a slacker! </b>(although you could be right sometimes...)
+            Besides work, I think life offers so many meaningful and exciting experiences! Therefore, if this site appears to be outdated, please do not think of me as a slacker (although you could be right sometimes...)!
             Because I might be somewhere enjoying a beautiful hike or bike ride, running, doing yoga, playing volleyball, reading a good book, practicing guitar, volunteering, or spending quality time with my family and friends.
             I really do take physical and mental health seriously, as well as work-life balance! 😁
         </p>
 
         <p>
-            On this site, I hope you can find something useful about building web applications with TypeScript, React.js or programming in general in <RouterLink to={pagesKey['coding']['path']}>{pagesKey['coding']['name']}</RouterLink>.
+            On this site, I hope you can find something useful about building web applications with TypeScript, React.js and programming in general in <RouterLink to={pagesKey['coding']['path']}>{pagesKey['coding']['name']}</RouterLink>.
             Occasionally, I will attempt to share about other topics that interest me in my <RouterLink to={pagesKey['blog']['path']}>{pagesKey['blog']['name']}</RouterLink>,
             such as active and frugal lifestyle, travel and travel hacking, climate change and conservation, or things I learn from building the life I love.
         </p>
