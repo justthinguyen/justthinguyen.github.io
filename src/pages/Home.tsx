@@ -9,9 +9,8 @@ export default function Home() {
             <Grid item xs={12} md={7} lg={7} sx={{ p: 5 }}>
                 <Intro />
             </Grid>
-            <Grid container item xs={12} md={4.5} lg={4.5}>
+            <Grid className='Thi-profile-pic' container item xs={12} md={4.5} lg={4.5} sx={{ justifyContent: 'center' }}>
                 <Box
-                    className="Thi-profile-pic"
                     component="img"
                     sx={{
                         maxHeight: { xs: '80%', md: '60%' },
