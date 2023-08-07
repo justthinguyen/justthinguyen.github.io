@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { Box, CssBaseline, Toolbar } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
@@ -11,6 +12,7 @@ import { lightTheme, darkTheme } from './Theme';
 import { PaletteMode } from '@mui/material';
 import { brand, navItems, pages } from './siteInfo';
 
+const helmetContext = {};
 const ThemeContext = createContext('light');
 
 export default function App() {
@@ -25,26 +27,28 @@ export default function App() {
     }
 
     return (
-        <ThemeContext.Provider value={themeColor}>
-            <ThemeProvider theme={theme}>
-                <Box sx={{ display: 'flex' }}>
-                    <CssBaseline />
-                    <TopBar className='top-bar' header={brand} handleDrawerToggle={handleDrawerToggle}
-                        navItems={navItems} path={pages} >
-                        <ColorModeButton mode={themeColor} toggleColorMode={handleThemeColorToggle}></ColorModeButton>
-                    </TopBar>
-                    <Box component="nav">
-                        <NavDrawer className='nav-drawer'
-                            header={brand} handleDrawerToggle={handleDrawerToggle}
-                            navItems={navItems} path={pages} open={mobileOpen} width={240} />
+        <HelmetProvider context={helmetContext}>
+            <ThemeContext.Provider value={themeColor}>
+                <ThemeProvider theme={theme}>
+                    <Box sx={{ display: 'flex' }}>
+                        <CssBaseline />
+                        <TopBar className='top-bar' header={brand} handleDrawerToggle={handleDrawerToggle}
+                            navItems={navItems} path={pages} >
+                            <ColorModeButton mode={themeColor} toggleColorMode={handleThemeColorToggle}></ColorModeButton>
+                        </TopBar>
+                        <Box component="nav">
+                            <NavDrawer className='nav-drawer'
+                                header={brand} handleDrawerToggle={handleDrawerToggle}
+                                navItems={navItems} path={pages} open={mobileOpen} width={240} />
+                        </Box>
+                        <Box component="main" sx={{ p: 3, flexGrow: 1, minHeight: '85vh' }}>
+                            <Toolbar />
+                            <Outlet></Outlet>
+                        </Box>
                     </Box>
-                    <Box component="main" sx={{ p: 3, flexGrow: 1, minHeight: '85vh' }}>
-                        <Toolbar />
-                        <Outlet></Outlet>
-                    </Box>
-                </Box>
-                <Footer></Footer>
-            </ThemeProvider>
-        </ThemeContext.Provider>
+                    <Footer></Footer>
+                </ThemeProvider>
+            </ThemeContext.Provider>
+        </HelmetProvider>
     );
 }
