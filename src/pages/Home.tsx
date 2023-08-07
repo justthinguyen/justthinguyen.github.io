@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { Box, Grid } from '@mui/material';
-import { Intro } from '../contents/MyInfo';
+import { Intro, fullName } from '../contents/MyInfo';
 
 export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Thi Nguyen - Home Page</title>
-                <meta name='description' content='Thi Nguyen Personal Website home page' />
+                <title>{fullName} - Home Page</title>
+                <meta name='description' content={fullName + `'s Personal Website home page`} />
             </Helmet>
             <Grid container spacing={2}>
                 <Grid item xs={0} md={0.5} lg={0.5}></Grid>

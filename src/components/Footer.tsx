@@ -3,7 +3,7 @@ import { Paper, Typography, IconButton, Link, LinkProps, Tooltip } from '@mui/ma
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import { mediaLink } from '../contents/MyInfo';
+import { mediaLink, fullName } from '../contents/MyInfo';
 
 
 const BottomPaper = styled(Paper)({
@@ -33,6 +33,6 @@ export const Footer = () =>
         <MediaButton href={mediaLink['LinkedIn']} title='Visit my LinkedIn'><LinkedInIcon sx={{ fontSize: '1.8rem' }} /></MediaButton>
         <MediaButton href={mediaLink['EmailMe']} title='Send me an email'><EmailIcon sx={{ fontSize: '1.7rem' }} /></MediaButton>
         <br />
-        © 2023. Thi Nguyen
+        © 2023. {fullName}
     </Typography>
 </BottomPaper >)

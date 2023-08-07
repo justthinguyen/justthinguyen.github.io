@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Helmet } from 'react-helmet-async';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import App from './App';
 import { pagesKey } from './siteInfo';
+import { fullName } from './contents/MyInfo';
 
 import './index.css';
 
 interface props { page?: string }
-const Root = (ps: props) => (<div><h2>Hi there!</h2> Nothing in {ps.page} yet, but Thi is diligently working on this. Please stay tune! </div>);
+const Root = (ps: props) =>
+(<>
+    <Helmet>
+        <title>{fullName} - {ps.page}</title>
+        <meta name='description' content={fullName + ' Personal Website ' + ps.page} />
+    </Helmet>
+    <div>
+        <h2>Hi there!</h2>
+        Nothing in {ps.page} yet, but Thi is diligently working on this. Please stay tune!
+    </div>
+</>
+);
 
 const router = createBrowserRouter(
     createRoutesFromElements(

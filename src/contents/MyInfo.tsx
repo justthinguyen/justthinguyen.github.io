@@ -9,6 +9,7 @@ export const mediaLink = {
     'Email': 'thi@justthinguyen.com'
 };
 
+export const fullName = 'Thi Nguyen'
 export const Intro = () => (
     <Typography>
         <h2>Hi friend! ☀️</h2>
@@ -39,7 +40,7 @@ export const Intro = () => (
         </p>
 
         Sincerely,<br />
-        Thi Nguyen
+        {fullName}
 
     </Typography >
 )
