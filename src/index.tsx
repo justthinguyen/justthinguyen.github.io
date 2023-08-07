@@ -4,6 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } 
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import App from './App';
+import { pagesKey } from './siteInfo';
 
 import './index.css';
 
@@ -15,10 +16,10 @@ const router = createBrowserRouter(
         <Route path="/" element={<App />} errorElement={<ErrorPage />}>
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Home />} />
-                <Route path="/coding/" element={<Root page="Coding Tutorials" />} />
-                <Route path="/blog" element={<Root page="Blog" />} />
-                <Route path="/resume" element={<Root page="Resume" />} />
-                <Route path="/work-with-me" element={<Root page="Work with Me" />} />
+                <Route path={pagesKey['coding']['path']} element={<Root page={pagesKey['coding']['name']} />} />
+                <Route path={pagesKey['blog']['path']} element={<Root page={pagesKey['blog']['name']} />} />
+                <Route path={pagesKey['project']['path']} element={<Root page={pagesKey['project']['name']} />} />
+                <Route path={pagesKey['resume']['path']} element={<Root page={pagesKey['resume']['name']} />} />
             </Route>
         </Route>
     )

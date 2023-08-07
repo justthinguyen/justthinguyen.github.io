@@ -7,8 +7,9 @@ export type PageInfo = {
 export const pagesKey: { [key: string]: PageInfo; } = {
     'coding': { name: 'Coding Resources', path: '/coding' },
     'blog': { name: 'Blog', path: '/blog' },
+    'project': { name: 'Projects', path: '/project' },
     'resume': { name: 'Resume', path: '/resume' },
-    'work': { name: 'Work with Me', path: '/work-with-me' }
+    // 'work': { name: 'Work with Me', path: '/work-with-me' }
 }
 
 export const navItems = Object.values(pagesKey).map(o => o.name);
