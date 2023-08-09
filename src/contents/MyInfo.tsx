@@ -10,6 +10,7 @@ export const mediaLink = {
 };
 
 export const fullName = 'Thi Nguyen'
+export const mainSiteDescription = fullName + ' Software Engineer Personal Website'
 export const Intro = () => (
     <Typography>
         <h2>Hi friend! ☀️</h2>

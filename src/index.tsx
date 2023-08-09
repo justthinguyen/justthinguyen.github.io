@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import App from './App';
 import { pagesKey } from './siteInfo';
-import { fullName } from './contents/MyInfo';
+import { fullName, mainSiteDescription } from './contents/MyInfo';
 
 import './index.css';
 
@@ -15,7 +15,7 @@ const Root = (ps: props) =>
 (<>
     <Helmet>
         <title>{fullName} - {ps.page}</title>
-        <meta name='description' content={fullName + ' Personal Website ' + ps.page} />
+        <meta name='description' content={mainSiteDescription + ' ' + ps.page} />
     </Helmet>
     <div>
         <h2>Hi there!</h2>
