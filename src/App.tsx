@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 import { NavDrawer } from './components/Navigation';
 import { TopBar } from './components/Bars';
 import { Footer } from './components/Footer';
-import { ColorModeButton } from './components/ColorModeButton';
+import { ColorModeButton } from './components/Buttons';
 
 import { lightTheme, darkTheme } from './Theme';
 import { PaletteMode } from '@mui/material';
