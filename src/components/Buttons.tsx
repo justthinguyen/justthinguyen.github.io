@@ -1,6 +1,5 @@
-import IconButton from '@mui/material/IconButton';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { Brightness4, Brightness7, KeyboardArrowUp } from '@mui/icons-material';
+import { IconButton, Fab } from '@mui/material';
 
 interface BtnProps {
     mode: string,
@@ -15,7 +14,17 @@ export const ColorModeButton = (ps: BtnProps) => {
                 color: 'text.primary'
             }}
             onClick={ps.toggleColorMode} color="inherit">
-            {ps.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            {ps.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
         </IconButton>
     );
 }
+
+const FABStandard = {
+    width: '35px', height: '35px',
+    color: 'text.primary',
+    bgcolor: 'transparent',
+}
+
+export const MoveUpFAB = () =>
+(<Fab sx={{ ...FABStandard, position: 'fixed', bottom: '5%', right: '5%' }}> <KeyboardArrowUp />
+</Fab >)
