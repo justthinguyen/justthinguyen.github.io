@@ -41,7 +41,7 @@ export default function App() {
                                 header={brand} handleDrawerToggle={handleDrawerToggle}
                                 navItems={navItems} path={pages} open={mobileOpen} width={240} />
                         </Box>
-                        <Box component="main" sx={{ p: 3, flexGrow: 1, minHeight: '85vh' }}>
+                        <Box component="main" sx={{ p: 3, flexGrow: 1, minHeight: '90vh' }}>
                             <Toolbar />
                             <Outlet></Outlet>
                         </Box>
