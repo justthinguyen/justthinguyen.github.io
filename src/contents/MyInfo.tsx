@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import { RouterLink } from '../components/Navigation';
 import { pagesKey } from '../siteInfo';
+import { IResume } from '../Types';
 
 export const mediaLink = {
     'Github': 'https://github.com/ngthing',
@@ -48,21 +49,9 @@ export const Intro = () => (
     </Typography >
 )
 
-interface EducationHistory {
-    degree: string, school: string, graduation: string, major: string, minor: string, more?: string
-}
-interface WorkHistory {
-    position: string, company: string, duration: string, location?: string, details: string[]
-}
-interface Skills { [key: string]: string[] }
 
-interface Resume {
-    'SKILLS': Skills,
-    'WORK HISTORY': WorkHistory[],
-    'EDUCATION': EducationHistory[]
-}
 const ThiCollege = 'George Mason University'; const ThiCollegeLocation = 'Fairfax, VA';
-export const ThiResumeContents: Resume = {
+export const ThiResume: IResume = {
     'SKILLS': {
         'Front-end': ['TypeScript', 'React.js', 'JavaScript', 'HTML', 'CSS', 'ES6', 'Material UI', 'jQuery', 'Paper.js', 'Puppeteer'],
         'Back-end': ['Node.js', 'PHP', 'Java', 'Amazon DynamoDB', 'PostgreSQL', 'Firebase Realtime Database', 'RESTful APIs design']
