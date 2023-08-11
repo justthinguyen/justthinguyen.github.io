@@ -53,8 +53,8 @@ export const Intro = () => (
 const ThiCollege = 'George Mason University'; const ThiCollegeLocation = 'Fairfax, VA';
 export const ThiResume: IResume = {
     'SKILLS': {
-        'Front-end': ['TypeScript', 'React.js', 'JavaScript', 'HTML', 'CSS', 'ES6', 'Material UI', 'jQuery', 'Paper.js', 'Puppeteer'],
-        'Back-end': ['Node.js', 'PHP', 'Java', 'Amazon DynamoDB', 'PostgreSQL', 'Firebase Realtime Database', 'RESTful APIs design']
+        'Front-end': ['TypeScript,+5', 'React.js,+5', 'JavaScript,+5', 'HTML', 'CSS', 'Material UI', 'jQuery', 'Paper.js', 'Puppeteer'],
+        'Back-end': ['PHP,+5', 'Node.js', 'Java', 'Amazon DynamoDB', 'PostgreSQL', 'Firebase Realtime Database', 'APIs design']
     },
     'WORK HISTORY': [
         {
@@ -63,15 +63,14 @@ export const ThiResume: IResume = {
             duration: 'August 2018 - July 2023',
             location: 'Manassas, VA',
             details: [
-                "Designed, implemented, tested and shipped 50+ new features for both front-end (TypeScript, React.js, jQuery) and back-end (PHP, Java) of the glass manufacturing and customer relationship management applications used by the sales, operations, and fabrication departments at DGM.",
-                "Developed the pricing algorithm to calculate product prices based on complex factors such as material, internal cutouts, exterior cuts, edgework, included hardware, type of products, different pricing modes for various users and customers.",
-                "Managed the primary DynamoDB database with 20+ tables with key tables comprising 5000+ entries. Learned AWS services.",
+                "Designed, implemented, tested and shipped 100+ new features for both front-end and back-end of the glass manufacturing and customer relationship management applications used by the sales, operations, and fabrication departments.",
+                "Managed 20+ tables DynamoDB database with key tables comprising 5000+ entries. Learned AWS services.",
                 "Created a web scraping application using TypeScript and Puppeteer, allowing for the extraction of information from thousands of hardware products on vendor websites for integration into the company's database.",
-                "Technical contributions led to increased sales and enabled the company to launch their franchise/partner program.",
+                "These technical contributions enabled automatic quotes which led to increased sales and helped the company launch their franchise/partner program.",
                 "Conducted direct and virtual training sessions and support for 10+ key users on a regular basis, gathering feedback on our applications and gaining insights into their business challenges and requests.",
-                "Collaborated in reviewing customer requirements and designing software solutions and architectures with the direct manager and lead engineers.",
-                "Frequently conducted code review, facilitated sprint planning meetings, technical meetings across 3 different teams to assess user's technical requirements, brainstorm solutions, and assign tasks to appropriate team members.",
-                "Provided guidance and mentorship to three new engineers and three interns who joined the team during my time here."
+                "Reviewed customer requirements and designed software solutions and architectures with the product manager and lead engineers.",
+                "Conducted code review, facilitated sprint planning meetings, technical meetings across 3 teams to assess user requirements, brainstorm solutions, and assign tasks to appropriate team members.",
+                "Provided onboarding guidance and mentorship to four engineers and three interns."
             ]
         },
         {
