@@ -25,6 +25,10 @@ const FABStandard = {
     bgcolor: 'transparent',
 }
 
-export const MoveUpFAB = () =>
-(<Fab sx={{ ...FABStandard, position: 'fixed', bottom: '5%', right: '5%' }}> <KeyboardArrowUp />
-</Fab >)
+const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }) };
+
+export const MoveUpFAB = () => (
+    <Fab sx={{ ...FABStandard, position: 'fixed', bottom: '5%', right: '5%' }} onClick={scrollToTop}>
+        <KeyboardArrowUp />
+    </Fab >
+)

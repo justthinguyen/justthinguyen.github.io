@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Box, CssBaseline, Toolbar } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 import { NavDrawer } from './components/Navigation';
 import { TopBar } from './components/Bars';
 import { Footer } from './components/Footer';
-import { ColorModeButton } from './components/Buttons';
+import { ColorModeButton, MoveUpFAB } from './components/Buttons';
 
 import { lightTheme, darkTheme } from './Theme';
 import { PaletteMode } from '@mui/material';
@@ -16,9 +16,17 @@ const helmetContext = {};
 const ThemeContext = createContext('light');
 
 export default function App() {
+    const [showMoveUpButton, setShowMoveUpButton] = useState(false);
     const [themeColor, setThemeColor] = useState<PaletteMode>('light');
     const [mobileOpen, setMobileOpen] = useState(false);
     const theme = themeColor === 'light' ? lightTheme : darkTheme;
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setShowMoveUpButton(window.scrollY > 300)
+        })
+    })
+
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
@@ -44,7 +52,9 @@ export default function App() {
                         <Box component="main" sx={{ p: 3, flexGrow: 1, minHeight: '90vh' }}>
                             <Toolbar />
                             <Outlet></Outlet>
+                            {showMoveUpButton && <MoveUpFAB />}
                         </Box>
+
                     </Box>
                     <Footer></Footer>
                 </ThemeProvider>
