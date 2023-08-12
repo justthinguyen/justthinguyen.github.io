@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-import { Badge, Box, Chip, Grid, Stack } from '@mui/material';
+import { Badge, Box, Chip, Grid, Typography } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../Types';
-import { TextTooltip, TextStack } from '../components/CustomizedMUI';
+import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
 
 const pageName = 'Resume';
 interface ResumeProps {
@@ -10,6 +10,7 @@ interface ResumeProps {
 }
 // TODO: refactor to reuse
 const Skills = (ps: { skills: ISkills }) => {
+    const title = 'SKILLS';
     const specialSkillChip = (s: string, y: string) => (
         <TextTooltip title={y + ' years working experience'} placement="top-end" sx={{ bgcolor: 'transparent' }} >
             <Badge badgeContent={y} color="primary" sx={{ mr: 1 }}>
@@ -28,27 +29,34 @@ const Skills = (ps: { skills: ISkills }) => {
 
     return (
         <Box>
-            <h4>SKILLS</h4>
+            <Title>{title}</Title>
             {Object.keys(ps.skills).map(key =>
-                <div><h4>{key}</h4> {skillsStack(ps.skills[key])}<br /></div>
+                <div><Subtitle>{key}</Subtitle> {skillsStack(ps.skills[key])}</div>
             )}
+            <br />
         </Box>
     )
 }
 const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
+    const title = 'WORK HISTORY';
+    const Work = (work: IWorkHistory) => {
+        const { position, company, duration, location, details } = work;
+        return (
+            <>
+                <Subtitle>{position} @ {company}
+                    <Caption>  {duration} | {location} </Caption>
+                </Subtitle>
+                <Typography>
+                    <ul>{details.map(info => <li>{info}</li>)}</ul>
+                </Typography>
+            </>
+        )
+    };
     return (
-        <>
-            <h3>WORK HISTORY</h3>
-            {ps.workHistory.map(work =>
-                Object.keys(work).map(key =>
-                    <div>
-                        <h4>{key}</h4>
-                        <p>{work[key as keyof IWorkHistory]}</p>
-                    </div>
-                )
-            )}
-
-        </>
+        <Box>
+            <Title>{title}</Title>
+            {ps.workHistory.map(work => Work(work))}
+        </Box>
     )
 }
 const Resume = (ps: ResumeProps) => {
