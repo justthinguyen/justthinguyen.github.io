@@ -2,13 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { Badge, Box, Chip, Grid, Stack } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../Types';
-import { TextTooltip } from '../components/CustomizedMUI';
+import { TextTooltip, TextStack } from '../components/CustomizedMUI';
 
 const pageName = 'Resume';
 interface ResumeProps {
     contents: IResume
 }
-// TODO: refactor to reuse, responsive layout
+// TODO: refactor to reuse
 const Skills = (ps: { skills: ISkills }) => {
     const specialSkillChip = (s: string, y: string) => (
         <TextTooltip title={y + ' years working experience'} placement="top-end" sx={{ bgcolor: 'transparent' }} >
@@ -21,18 +21,18 @@ const Skills = (ps: { skills: ISkills }) => {
 
     const skillsStack = (skills: string[]) => {
         return (
-            <Stack direction="row" spacing={1} sx={{ pt: 0.5 }}>
+            <TextStack direction="row" spacing={1}>
                 {skills.map(s => s.split(',')).map((sYear) => (sYear[1] ? specialSkillChip(sYear[0], sYear[1]) : skillChip(sYear[0])))}
-            </Stack>)
+            </TextStack>)
     };
 
     return (
-        <>
+        <Box>
             <h4>SKILLS</h4>
             {Object.keys(ps.skills).map(key =>
-                <div><b>{key}</b> {skillsStack(ps.skills[key])}<br /></div>
+                <div><h4>{key}</h4> {skillsStack(ps.skills[key])}<br /></div>
             )}
-        </>
+        </Box>
     )
 }
 const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
@@ -54,10 +54,10 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
 const Resume = (ps: ResumeProps) => {
     const skills = ps.contents.SKILLS, workHistory = ps.contents['WORK HISTORY'], education = ps.contents.EDUCATION;
     return (
-        <Box>
+        <>
             <Skills skills={skills} />
             <WorkHistory workHistory={workHistory} />
-        </Box>
+        </>
     );
 }
 
