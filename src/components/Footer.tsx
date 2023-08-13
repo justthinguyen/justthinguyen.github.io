@@ -1,9 +1,10 @@
 import { styled } from '@mui/system';
-import { Paper, Typography, IconButton, Link, LinkProps, Tooltip } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { mediaLink, fullName } from '../contents/MyInfo';
+import { MediaButton } from '../components/CustomizedMUI';
 
 
 const BottomPaper = styled(Paper)({
@@ -12,19 +13,6 @@ const BottomPaper = styled(Paper)({
     padding: '2% 10%',
 })
 
-const MediaButton = (ps: LinkProps) => (
-    <Tooltip title={ps.title} placement="top">
-        <IconButton sx={{
-            padding: '5px 8px',
-            ':hover': {
-                padding: '5px 8px',
-                'border-radius': '25%'
-            }
-        }}>
-            <Link sx={{ color: 'inherit' }} target='_blank' href={ps.href} title={ps.title}>{ps.children}</Link>
-        </IconButton >
-    </Tooltip>
-);
 
 export const Footer = () =>
 (<BottomPaper className='footer'>
