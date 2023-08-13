@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-import { Badge, Box, Chip, Grid, Typography } from '@mui/material';
+import { Badge, Box, Chip, Grid, Typography, Button, Link, Tooltip } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../Types';
 import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
 const pageName = 'Resume';
 interface ResumeProps {
@@ -78,6 +79,12 @@ export default function ResumePage() {
             <Grid container spacing={2}>
                 <Grid item xs={0} md={0.5} lg={0.5}></Grid>
                 <Grid item xs={12} md={9} lg={9} sx={{ p: 5 }}>
+                    <Button color='secondary' sx={{ position: 'relative', right: '-90%' }}>
+                        <TextTooltip title='See Resume in PDF' placement='bottom'>
+                            <Link target='_blank' href='ThiNguyen-Resume.pdf'><PictureAsPdfIcon fontSize='large' /></Link>
+                        </TextTooltip>
+                    </Button>
+
                     <Resume contents={ThiResume} />
                 </Grid>
                 <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container  >
