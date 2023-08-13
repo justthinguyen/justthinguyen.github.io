@@ -60,12 +60,35 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
         </Box>
     )
 }
+
+const EducationHistory = (ps: { educationHistory: IEducationHistory[] }) => {
+    const title = 'EDUCATION';
+    const Education = (edu: IEducationHistory) => {
+        const { degree, school, graduation, major, minor, more } = edu;
+        return (
+            <>
+                <Subtitle>{degree}, {school}
+                    <Caption>  {graduation}  </Caption>
+                </Subtitle>
+                <Typography sx={{ ml: '20px' }}>{major}, {minor}, {more}</Typography >
+            </>
+        )
+    };
+    return (
+        <Box>
+            <Title>{title}</Title>
+            {ps.educationHistory.map(edu => Education(edu))}
+        </Box>
+    )
+}
+
 const Resume = (ps: ResumeProps) => {
     const skills = ps.contents.SKILLS, workHistory = ps.contents['WORK HISTORY'], education = ps.contents.EDUCATION;
     return (
         <>
             <Skills skills={skills} />
             <WorkHistory workHistory={workHistory} />
+            <EducationHistory educationHistory={education} />
         </>
     );
 }
