@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Badge, Box, Chip, Grid, Typography, Button, Link, Tooltip } from '@mui/material';
+import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../Types';
 import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
