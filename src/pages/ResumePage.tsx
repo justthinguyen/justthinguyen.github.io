@@ -13,13 +13,13 @@ interface ResumeProps {
 const Skills = (ps: { skills: ISkills }) => {
     const title = 'SKILLS';
     const specialSkillChip = (s: string, y: string) => (
-        <TextTooltip title={y + ' years working experience'} placement="top-end" sx={{ bgcolor: 'transparent' }} >
+        <TextTooltip key={s} title={y + ' years working experience'} placement="top-end" sx={{ bgcolor: 'transparent' }} >
             <Badge badgeContent={y} color="primary" sx={{ mr: 1 }}>
                 <Chip label={s} color="secondary" size="small" sx={{ pr: 0.5 }} />
             </Badge>
         </TextTooltip>
     );
-    const skillChip = (s: string) => (<Chip label={s} color="secondary" size="small" />)
+    const skillChip = (s: string) => (<Chip key={s} label={s} color="secondary" size="small" />)
 
     const skillsStack = (skills: string[]) => {
         return (
@@ -32,7 +32,7 @@ const Skills = (ps: { skills: ISkills }) => {
         <Box>
             <Title>{title}</Title>
             {Object.keys(ps.skills).map(key =>
-                <div><Subtitle>{key}</Subtitle> {skillsStack(ps.skills[key])}</div>
+                <div key={key}><Subtitle>{key}</Subtitle> {skillsStack(ps.skills[key])}</div>
             )}
             <br />
         </Box>
@@ -43,14 +43,14 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
     const Work = (work: IWorkHistory) => {
         const { position, company, duration, location, details } = work;
         return (
-            <>
+            <Box key={`${position}-${company}-${duration}`}>
                 <Subtitle>{position} @ {company}
                     <Caption>  {duration} | {location} </Caption>
                 </Subtitle>
                 <Typography>
                     <ul>{details.map(info => <li>{info}</li>)}</ul>
                 </Typography>
-            </>
+            </Box>
         )
     };
     return (
@@ -66,12 +66,12 @@ const EducationHistory = (ps: { educationHistory: IEducationHistory[] }) => {
     const Education = (edu: IEducationHistory) => {
         const { degree, school, graduation, major, minor, more } = edu;
         return (
-            <>
+            <Box key={`${degree}-${school}`}>
                 <Subtitle>{degree}, {school}
                     <Caption>  {graduation}  </Caption>
                 </Subtitle>
                 <Typography sx={{ ml: '20px' }}>{major}, {minor}, {more}</Typography >
-            </>
+            </Box>
         )
     };
     return (
