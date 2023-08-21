@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
-import { Stack, Typography, IconButton, Link, LinkProps, Tooltip } from '@mui/material';
+import { Stack, Typography, TypographyProps, IconButton, Link, LinkProps, Tooltip } from '@mui/material';
 
 export const TextTooltip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} classes={{ popper: className }} />
@@ -24,17 +24,18 @@ export const Title = styled(Typography)({
     lineHeight: 1.6,
 })
 
-export const Subtitle = styled(Typography)({
+export const SubtitleSX = {
     margin: '6px',
     fontWeight: 800,
     fontSize: '1rem'
-})
-
-export const Caption = styled(Typography)({
+}
+export const CaptionSX = {
     fontWeight: 400,
     fontSize: '0.9rem',
     lineHeight: 1.66
-})
+}
+export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx={SubtitleSX}>{ps.children}</Typography>
+export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX}>{ps.children}</Typography>
 
 export const MediaButton = (ps: LinkProps) => (
     <Tooltip title={ps.title} placement="top">
