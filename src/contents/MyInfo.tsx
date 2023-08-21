@@ -15,8 +15,8 @@ export const resumeLink = 'https://docs.google.com/document/d/1bYqGHmOM8DATNu2_m
 export const fullName = 'Thi Nguyen'
 export const mainSiteDescription = fullName + ' Software Engineer Personal Website'
 export const Intro = () => (
-    <Typography>
-        <h2>Hi friend! ☀️</h2>
+    <Typography component={'div'}>
+        <Typography component={'span'} variant={'h5'}>Hi friend! ☀️</Typography>
         <p>
             I’m Thi, by profession, a full-stack software engineer who spends most of the year in Northern Virginia/Washington, DC, USA.
             In July 2023, I decided to take a short break from my 9-5 job to work on projects that I've been wanting to do (like this website!).
