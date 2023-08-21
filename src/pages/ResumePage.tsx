@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
-import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../Types';
+import { ISkills, IWorkHistory, IEducationHistory, IResume, ITextLink } from '../Types';
 import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
@@ -9,6 +9,9 @@ const pageName = 'Resume';
 interface ResumeProps {
     contents: IResume
 }
+const insertLink = (text: string, links: ITextLink): string =>
+    Object.keys(links).reduce((insertedText, k) => insertedText.replaceAll(k, `<a href="${links[k]}" target="_blank">${k}</a>`), text);
+
 // TODO: refactor to reuse
 const Skills = (ps: { skills: ISkills }) => {
     const title = 'SKILLS';
@@ -42,14 +45,13 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
     const title = 'WORK HISTORY';
     const Work = (work: IWorkHistory) => {
         const { position, company, duration, location, details } = work;
+        const links = work.links ?? {};
         return (
             <Box key={`${position}-${company}-${duration}`}>
                 <Subtitle>{position} @ {company}
                     <Caption>  {duration} | {location} </Caption>
                 </Subtitle>
-                <Typography>
-                    <ul>{details.map(info => <li>{info}</li>)}</ul>
-                </Typography>
+                <ul>{details.map((info, i) => <li key={i} dangerouslySetInnerHTML={{ __html: insertLink(info, links) }}></li>)}</ul>
             </Box>
         )
     };

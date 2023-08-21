@@ -104,8 +104,12 @@ export const ThiResume: IResume = {
             details: [
                 "Provided support to 50+ students by answering their questions during office hours and through the Piazza forum.",
                 "Offered constructive feedback while grading their assignments and group projects.",
-                "Courses: CS 306 - Synthesis of Ethics and Law for the Computing Professional (Fall 2017), Computer Systems and Programming (C, x86 Assembly) (Spring 2017); Intro to Computer Programming (Python), Object-Oriented Programming (Java) (Fall 2016)"
-            ]
+                "Courses: CS 306 - Synthesis of Ethics and Law for the Computing Professional (Fall 2017), CS 367 - Computer Systems and Programming (C, x86 Assembly) (Spring 2017); Intro to Computer Programming (Python), Object-Oriented Programming (Java) (Fall 2016)"
+            ],
+            links: {
+                'CS 306 - Synthesis of Ethics and Law for the Computing Professional': 'https://cs.gmu.edu/media/syllabi/Fall2017/CS_306MaddoxT.html',
+                'CS 367 - Computer Systems and Programming': 'https://cs.gmu.edu/media/syllabi/Spring2017/CS367AydinH.html',
+            }
         },
         {
             position: 'Undergraduate Researcher',
@@ -113,9 +117,14 @@ export const ThiResume: IResume = {
             duration: 'June 2016 - August 2016',
             location: ThiCollegeLocation,
             details: [
-                "Worked in a project funded by NSF: BIG DATA: Collaborative Research: Learning Data Analytics: Providing Actionable Insights to Increase CollegeStudent Success. Under supervision of Dr. Huzefa Rangwala.",
+                "Worked in a project funded by NSF BIG DATA: Collaborative Research: Learning Data Analytics: Providing Actionable Insights to Increase CollegeStudent Success. Under supervision of Dr. Huzefa Rangwala.",
                 "Designed and developed both front and back end for a degree planning web app using Django, Python, SQL,JQuery, AJAX. https://github.com/ngthing/SummerResearch2016-DegreePlannerWebApp"
-            ]
+            ],
+            links: {
+                'Dr. Huzefa Rangwala': 'https://cs.gmu.edu/~rangwala/la.html',
+                'NSF BIG DATA': 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=1447489&HistoricalAwards=false',
+                'https://github.com/ngthing/SummerResearch2016-DegreePlannerWebApp': 'https://github.com/ngthing/SummerResearch2016-DegreePlannerWebApp'
+            }
         }
     ],
     'EDUCATION': [
