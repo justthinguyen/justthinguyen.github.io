@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { RouterLink } from '../components/Navigation';
 import { pagesKey } from '../siteInfo';
-import { IResume } from '../Types';
+import { IResume } from '../types';
 
 export const mediaLink = {
     'Github': 'https://github.com/ngthing',

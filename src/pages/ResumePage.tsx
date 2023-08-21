@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material';
 import { fullName, ThiResume } from '../contents/MyInfo';
-import { ISkills, IWorkHistory, IEducationHistory, IResume, ITextLink } from '../Types';
+import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../types';
+import { insertLink } from '../utils';
 import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
@@ -9,8 +10,6 @@ const pageName = 'Resume';
 interface ResumeProps {
     contents: IResume
 }
-const insertLink = (text: string, links: ITextLink): string =>
-    Object.keys(links).reduce((insertedText, k) => insertedText.replaceAll(k, `<a href="${links[k]}" target="_blank">${k}</a>`), text);
 
 // TODO: refactor to reuse
 const Skills = (ps: { skills: ISkills }) => {
