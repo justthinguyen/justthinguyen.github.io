@@ -31,7 +31,7 @@ const Skills = (ps: { skills: ISkills }) => {
 
     return (
         <Box>
-            <Title id={title}>{title}</Title>
+            <Title id={title.toLowerCase()}>{title}</Title>
             {Object.keys(ps.skills).map(key =>
                 <div key={key}><Subtitle>{key}</Subtitle> {skillsStack(ps.skills[key])}</div>
             )}
@@ -55,7 +55,7 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
     };
     return (
         <Box>
-            <Title id={title}>{title}</Title>
+            <Title id='work'>{title}</Title>
             {ps.workHistory.map(work => Work(work))}
         </Box>
     )
@@ -76,7 +76,7 @@ const EducationHistory = (ps: { educationHistory: IEducationHistory[] }) => {
     };
     return (
         <Box>
-            <Title id={title}>{title}</Title>
+            <Title id={title.toLowerCase()}>{title}</Title>
             {ps.educationHistory.map(edu => Education(edu))}
         </Box>
     )
@@ -95,7 +95,6 @@ const Resume = (ps: ResumeProps) => {
 
 export default function ResumePage() {
     const pageName = 'Resume';
-    const pageContents = ['skills', 'work', 'education'];
     return (
         <>
             <Helmet>
@@ -114,10 +113,10 @@ export default function ResumePage() {
                 </Grid>
                 <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container>
                     <Box component="nav">
-                        <Subtitle>CONTENTS</Subtitle><br />
-                        <Subtitle><PlainLink href='#skill'>SKILLS</PlainLink></Subtitle><br />
-                        <Subtitle><Link href='#work'>WORK</Link></Subtitle><br />
-                        <Subtitle><Link href='#education'>EDUCATION</Link></Subtitle><br />
+                        <Subtitle>Overview</Subtitle><br />
+                        <Subtitle><PlainLink href='#skills'>SKILLS</PlainLink></Subtitle><br />
+                        <Subtitle><PlainLink href='#work'>WORK</PlainLink></Subtitle><br />
+                        <Subtitle><PlainLink href='#education'>EDUCATION</PlainLink></Subtitle><br />
                     </Box>
                 </Grid>
             </Grid>
