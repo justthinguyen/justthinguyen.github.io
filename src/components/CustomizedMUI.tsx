@@ -37,6 +37,16 @@ export const CaptionSX = {
 export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx={SubtitleSX}>{ps.children}</Typography>
 export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX}>{ps.children}</Typography>
 
+export const PlainLinkSX = {
+    // color: 'primary',
+    'text-decoration': 'none',
+    ':hover': { 'text-decoration': 'none', 'font-size': 'larger' },
+}
+
+export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} href={ps.href}>{ps.children}</Link>
+
+
+
 export const MediaButton = (ps: LinkProps) => (
     <Tooltip title={ps.title} placement="top">
         <IconButton sx={{

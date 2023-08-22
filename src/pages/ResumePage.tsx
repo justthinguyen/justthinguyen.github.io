@@ -3,10 +3,9 @@ import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material'
 import { fullName, ThiResume } from '../contents/MyInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../types';
 import { insertLink } from '../utils';
-import { Caption, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
+import { Caption, PlainLink, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
-const pageName = 'Resume';
 interface ResumeProps {
     contents: IResume
 }
@@ -32,7 +31,7 @@ const Skills = (ps: { skills: ISkills }) => {
 
     return (
         <Box>
-            <Title>{title}</Title>
+            <Title id={title}>{title}</Title>
             {Object.keys(ps.skills).map(key =>
                 <div key={key}><Subtitle>{key}</Subtitle> {skillsStack(ps.skills[key])}</div>
             )}
@@ -56,7 +55,7 @@ const WorkHistory = (ps: { workHistory: IWorkHistory[] }) => {
     };
     return (
         <Box>
-            <Title>{title}</Title>
+            <Title id={title}>{title}</Title>
             {ps.workHistory.map(work => Work(work))}
         </Box>
     )
@@ -77,7 +76,7 @@ const EducationHistory = (ps: { educationHistory: IEducationHistory[] }) => {
     };
     return (
         <Box>
-            <Title>{title}</Title>
+            <Title id={title}>{title}</Title>
             {ps.educationHistory.map(edu => Education(edu))}
         </Box>
     )
@@ -95,6 +94,8 @@ const Resume = (ps: ResumeProps) => {
 }
 
 export default function ResumePage() {
+    const pageName = 'Resume';
+    const pageContents = ['skills', 'work', 'education'];
     return (
         <>
             <Helmet>
@@ -111,8 +112,12 @@ export default function ResumePage() {
 
                     <Resume contents={ThiResume} />
                 </Grid>
-                <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container  >
+                <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container>
                     <Box component="nav">
+                        <Subtitle>CONTENTS</Subtitle><br />
+                        <Subtitle><PlainLink href='#skill'>SKILLS</PlainLink></Subtitle><br />
+                        <Subtitle><Link href='#work'>WORK</Link></Subtitle><br />
+                        <Subtitle><Link href='#education'>EDUCATION</Link></Subtitle><br />
                     </Box>
                 </Grid>
             </Grid>

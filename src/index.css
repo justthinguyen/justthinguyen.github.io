@@ -23,10 +23,17 @@ code {
 }
 
 .top-bar a.active,
-.nav-drawer a.active {
+.nav-drawer a.active,
+.contents-nav a.active {
     text-decoration: underline;
 }
 
 .top-bar {
     color: 'primary.contrastText',
+}
+
+.contents-nav {
+    top: 10%;
+    right: 0%;
+    position: fixed;
 }
