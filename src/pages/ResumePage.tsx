@@ -111,7 +111,7 @@ export default function ResumePage() {
 
                     <Resume contents={ThiResume} />
                 </Grid>
-                <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container>
+                <Grid item xs={0} md={2.5} lg={2.5} className='contents-nav' container sx={{ display: { xs: 'none', md: 'block', lg: 'block' } }}>
                     <Box component="nav">
                         <Subtitle>Overview</Subtitle><br />
                         <Subtitle><PlainLink href='#skills'>SKILLS</PlainLink></Subtitle><br />
