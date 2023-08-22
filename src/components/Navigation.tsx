@@ -11,7 +11,7 @@ export const RouterLink: React.FC<LinkProps<typeof NavLink>> = (ps) =>
 export const PlainNavLink = styled(RouterLink)({
     color: 'inherit',
     textDecoration: 'none',
-    ':hover': { 'textDecoration': 'none', 'fontSize': 'larger' },
+    ':hover': { 'textDecoration': 'none' },
 });
 
 interface IDrawerProps extends DrawerProps {
