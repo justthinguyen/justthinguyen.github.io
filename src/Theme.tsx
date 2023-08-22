@@ -6,7 +6,7 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
     palette: {
         mode: mode,
         primary: {
-            main: '#9a2351',
+            main: '#a42e57',
             contrastText: '#ffebec',
         },
         secondary: {
