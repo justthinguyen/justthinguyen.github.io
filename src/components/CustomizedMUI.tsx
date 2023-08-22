@@ -43,7 +43,7 @@ export const MediaButton = (ps: LinkProps) => (
             padding: '5px 8px',
             ':hover': {
                 padding: '5px 8px',
-                'border-radius': '25%'
+                borderRadius: '25%'
             }
         }}>
             <Link sx={{ color: 'inherit' }} target='_blank' href={ps.href} title={ps.title}>{ps.children}</Link>

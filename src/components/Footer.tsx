@@ -9,7 +9,7 @@ import { MediaButton } from '../components/CustomizedMUI';
 
 const BottomPaper = styled(Paper)({
     display: 'flex',
-    'text-align': 'center',
+    textAlign: 'center',
     padding: '2% 10%',
 })
 
