@@ -25,7 +25,7 @@ const Skills = (ps: { skills: ISkills }) => {
 
     const skillsStack = (skills: string[]) => {
         return (
-            <TextStack direction="row" spacing={1}>
+            <TextStack direction="row" spacing={1} sx={{ mt: 1 }}>
                 {skills.map(s => s.split(',')).map((sYear) => (sYear[1] ? specialSkillChip(sYear[0], sYear[1]) : skillChip(sYear[0])))}
             </TextStack>)
     };
