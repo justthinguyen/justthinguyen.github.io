@@ -38,9 +38,8 @@ export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx
 export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX}>{ps.children}</Typography>
 
 export const PlainLinkSX = {
-    // color: 'primary',
-    'text-decoration': 'none',
-    ':hover': { 'text-decoration': 'none', 'font-size': 'larger' },
+    textDecoration: 'none',
+    ':hover': { 'textDecoration': 'underline' },
 }
 
 export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} href={ps.href}>{ps.children}</Link>
