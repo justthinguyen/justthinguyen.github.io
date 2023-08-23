@@ -1,7 +1,6 @@
 # 👋 Thi Nguyen's Website. 
 
-Please visit [https://justthinguyen.com](https://justthinguyen.com) for the live demo of this project. 
-
+This project is a perpetual rollercoaster, and new things will just keep piling up for extra excitement! 🎢🚀
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
