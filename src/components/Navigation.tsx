@@ -9,7 +9,6 @@ export const RouterLink: React.FC<LinkProps<typeof NavLink>> = (ps) =>
     <MUILink component={NavLink} {...ps}>{ps.children}</MUILink>;
 
 export const PlainNavLink = styled(RouterLink)({
-    color: 'inherit',
     textDecoration: 'none',
     ':hover': { 'textDecoration': 'none' },
 });

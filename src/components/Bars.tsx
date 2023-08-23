@@ -1,6 +1,7 @@
 import { AppBar, AppBarProps, Box, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { PlainNavLink } from './Navigation';
+import { AppBarSX } from '../Theme';
 
 interface BarProps extends AppBarProps {
     header?: string;
@@ -11,12 +12,13 @@ interface BarProps extends AppBarProps {
     width?: number;
 }
 
+
 export const TopBar = (ps: BarProps) => {
     const { header, headerPath, handleDrawerToggle, navItems, path } = ps;
     return (
-        <AppBar component="nav" color="primary" className={ps.className}>
+        <AppBar component="nav" className={ps.className} sx={AppBarSX} >
             <Toolbar>
-                <IconButton color="inherit" aria-label="open drawer" edge="start"
+                <IconButton color="primary" aria-label="open drawer" edge="start"
                     onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: 'none' } }}
                 >
                     <MenuIcon />
@@ -29,7 +31,7 @@ export const TopBar = (ps: BarProps) => {
 
                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {navItems.map((item) => (
-                        <Button key={item} color='secondary'>
+                        <Button key={item} color='primary'>
                             <PlainNavLink to={path[item]}> {item} </PlainNavLink>
                         </Button>
                     ))}

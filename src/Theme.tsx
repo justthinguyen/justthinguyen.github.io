@@ -7,15 +7,15 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
         mode: mode,
         primary: {
             main: '#B73A65',
-            contrastText: '#ffebec',
+            contrastText: '#fbf4f7',
         },
         secondary: {
-            main: '#ffebec',
+            main: '#F8E4E7',
             contrastText: '#1d2547',
         },
         ...(mode === 'dark' ? {
             text: {
-                primary: '#ffebee', //'#ffcdd2',
+                primary: '#fbf4f7' //'#ffcdd2', '#ffebee',
             }
         } : {
             text: {
@@ -26,7 +26,7 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
         ...(mode === 'light' && {
             background: {
                 default: '#fff',
-                paper: '#ffebec',
+                paper: '#fbf4f7' //'#ffebec',
             }
         }),
 
@@ -39,3 +39,9 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
 
 export const lightTheme = createTheme(themeOptions('light'));
 export const darkTheme = createTheme(themeOptions('dark'));
+
+export const AppBarSX = {
+    backgroundColor: 'background.paper',
+    boxShadow: 'none',
+    color: 'primary'
+};
