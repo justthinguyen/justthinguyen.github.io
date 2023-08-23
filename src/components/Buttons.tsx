@@ -1,5 +1,6 @@
 import { Brightness4, Brightness7, KeyboardArrowUp } from '@mui/icons-material';
 import { IconButton, Fab } from '@mui/material';
+import { AppBarButtonSX } from '../Theme';
 
 interface BtnProps {
     mode: string,
@@ -9,11 +10,8 @@ interface BtnProps {
 export const ColorModeButton = (ps: BtnProps) => {
     return (
         <IconButton
-            sx={{
-                ml: 1, bgcolor: 'background.paper',
-                color: 'text.primary'
-            }}
-            onClick={ps.toggleColorMode} color="inherit">
+            sx={{ ml: 1, ...AppBarButtonSX }}
+            onClick={ps.toggleColorMode}>
             {ps.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
         </IconButton>
     );

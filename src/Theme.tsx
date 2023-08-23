@@ -45,3 +45,8 @@ export const AppBarSX = {
     boxShadow: 'none',
     color: 'primary'
 };
+
+export const AppBarButtonSX = {
+    bgcolor: 'secondary.main',
+    color: 'secondary.contrastText'
+}
