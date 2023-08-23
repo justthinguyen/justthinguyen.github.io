@@ -42,9 +42,7 @@ export const PlainLinkSX = {
     ':hover': { 'textDecoration': 'underline' },
 }
 
-export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} href={ps.href}>{ps.children}</Link>
-
-
+export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} href={ps.href} target={ps.target}>{ps.children}</Link>
 
 export const MediaButton = (ps: LinkProps) => (
     <Tooltip title={ps.title} placement="top">
