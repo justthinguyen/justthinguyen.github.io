@@ -5,31 +5,36 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
 ({
     palette: {
         mode: mode,
-        primary: {
-            main: '#B73A65',
-            contrastText: '#fbf4f7',
-        },
-        secondary: {
-            main: '#F8E4E7',
-            contrastText: '#1d2547',
-        },
-        ...(mode === 'dark' ? {
-            text: {
-                primary: '#fbf4f7' //'#ffcdd2', '#ffebee',
-            }
-        } : {
+        ...(mode === 'light' ? {
+            primary: {
+                main: '#B73A65',
+                contrastText: '#fbf4f7',
+            },
+            secondary: {
+                main: '#b73a6547', //'#c56183',
+                contrastText: '#1d2547',
+            },
             text: {
                 primary: '#1d2547', //'#ffcdd2',
                 // secondary: '#ffebec'
-            }
-        }),
-        ...(mode === 'light' && {
+            },
             background: {
                 default: '#fff',
                 paper: '#fbf4f7' //'#ffebec',
             }
+        } : {
+            primary: {
+                main: '#B73A65',
+                contrastText: '#fbf4f7',
+            },
+            secondary: {
+                main: '#f1dfe5',  //'#b73a6566',//'#b73a6514',
+                contrastText: '#1d2547',
+            },
+            text: {
+                primary: '#fbf4f7' //'#ffcdd2', '#ffebee',
+            }
         }),
-
     },
     typography: {
         fontFamily: 'Montserrat, Droid Sans, Roboto'//'"DomaineText",Georgia,serif',
