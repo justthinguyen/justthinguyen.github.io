@@ -1,4 +1,4 @@
-# 👋 Thi Nguyen's Website. 
+# Thi Nguyen's Website. 👩🏻‍💻 🤗
 
 This project is a perpetual rollercoaster, and new things will just keep piling up for extra excitement! 🎢🚀
 
