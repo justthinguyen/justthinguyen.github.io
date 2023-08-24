@@ -5,10 +5,10 @@ export type PageInfo = {
     path: string;
 };
 export const pagesKey: { [key: string]: PageInfo; } = {
-    'coding': { name: 'Coding Resources', path: '/coding' },
-    'blog': { name: 'Blog', path: '/blog' },
+    'coding': { name: 'Coding', path: '/coding' },
     'project': { name: 'Projects', path: '/project' },
     'resume': { name: 'Resume', path: '/resume' },
+    'blog': { name: 'Thoughts', path: '/blog' },
     // 'work': { name: 'Work with Me', path: '/work-with-me' }
 }
 
