@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import { RouterLink } from '../components/Navigation';
 import { pagesKey } from '../siteInfo';
 import { IResume } from '../types';
+import { Header } from '../components/CustomizedMUI';
 
 export const mediaLink = {
     'Github': 'https://github.com/ngthing',
@@ -16,11 +17,9 @@ export const fullName = 'Thi Nguyen'
 export const mainSiteDescription = fullName + ' Software Engineer Personal Website'
 export const Intro = () => (
     <Typography component={'div'}>
-        <Typography component={'span'} variant={'h5'}>Hi friend! ☀️</Typography>
-        <p>
-            I’m Thi, by profession, a full-stack software engineer who spends most of the year in Northern Virginia/Washington, DC, USA.
-            In July 2023, I decided to take a sabbatical to travel and work on projects that I've been wanting to do (like this website!).
-        </p>
+        <Header color="primary.main">
+            Hi! I’m Thi, by profession, a full-stack software engineer. 👩🏻‍💻
+        </Header>
         <p>
             Sometimes, I love creating software to solve problems and improve daily efficiency for myself and others. I'm also passionate about learning and sharing my knowledge.
             Recently, I discovered my love for building React.js, TypeScript applications, and I'm working on a couple projects involving these two technologies, as well as writing tutorials to share what I learn.

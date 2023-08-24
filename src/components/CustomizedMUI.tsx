@@ -18,11 +18,11 @@ export const TextStack = styled(Stack)({
     pt: 0.5, flexWrap: 'wrap', gap: '3px'
 })
 
-export const Title = styled(Typography)({
+export const TitleSX = {
     fontWeight: 600,
     fontSize: '1.25rem',
     lineHeight: 1.6,
-})
+}
 
 export const SubtitleSX = {
     margin: '6px',
@@ -34,8 +34,16 @@ export const CaptionSX = {
     fontSize: '0.9rem',
     lineHeight: 1.66
 }
+
+export const HeaderSX = {
+    fontWeight: 600,
+    lineHeight: 1.6,
+}
+
 export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx={SubtitleSX}>{ps.children}</Typography>
 export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX}>{ps.children}</Typography>
+export const Header = (ps: TypographyProps) => <Typography variant="h5" sx={HeaderSX} color={ps.color}>{ps.children}</Typography>
+export const Title = (ps: TypographyProps) => <Typography variant="h6" sx={TitleSX} color={ps.color}>{ps.children}</Typography>
 
 export const PlainLinkSX = {
     textDecoration: 'none',
