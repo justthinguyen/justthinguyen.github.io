@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
+import CodingPage from './pages/CodingPage';
 import ResumePage from './pages/ResumePage';
 import ProjectPage from './pages/ProjectPage';
 import App from './App';
@@ -31,7 +32,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<App />} errorElement={<ErrorPage />}>
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Home />} />
-                <Route path={pagesKey['coding']['path']} element={<Root page={pagesKey['coding']['name']} />} />
+                <Route path={pagesKey['coding']['path']} element={<CodingPage />} />
                 <Route path={pagesKey['blog']['path']} element={<Root page={pagesKey['blog']['name']} />} />
                 <Route path={pagesKey['project']['path']} element={<ProjectPage />} />
                 <Route path={pagesKey['resume']['path']} element={<ResumePage />} />
