@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Grid, Typography } from '@mui/material';
-import { fullName } from '../contents/MyInfo';
+import { getPageTitle } from '../siteInfo';
 import { Title } from '../components/CustomizedMUI';
 
 export default function CodingPage() {
@@ -8,7 +8,7 @@ export default function CodingPage() {
     return (
         <>
             <Helmet>
-                <title>{fullName} - {pageName}</title>
+                <title>{getPageTitle(pageName)}</title>
             </Helmet>
             <Grid container spacing={2}>
                 <Grid item xs={0} md={1} lg={1}></Grid>

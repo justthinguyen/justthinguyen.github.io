@@ -1,13 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { Box, Grid } from '@mui/material';
 import { Intro, fullName } from '../contents/MyInfo';
+import { getPageTitle } from '../siteInfo';
 
 export default function Home() {
     return (
         <>
             <Helmet>
-                <title>{fullName} - Home Page</title>
-                <meta name='description' content={fullName + `'s Personal Website home page`} />
+                <title>{getPageTitle('About')}</title>
+                <meta name='description' content={fullName + `'s Personal Website`} />
             </Helmet>
             <Grid container spacing={2}>
                 <Grid item xs={0} md={0.5} lg={0.5}></Grid>

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Grid, Typography } from '@mui/material';
-import { fullName } from '../contents/MyInfo';
+import { getPageTitle } from '../siteInfo';
 import { Title, PlainLink } from '../components/CustomizedMUI';
 
 export default function ProjectPage() {
@@ -8,12 +8,12 @@ export default function ProjectPage() {
     return (
         <>
             <Helmet>
-                <title>{fullName} - {pageName}</title>
+                <title>{getPageTitle(pageName)}</title>
             </Helmet>
             <Grid container spacing={2}>
                 <Grid item xs={0} md={1} lg={1}></Grid>
                 <Grid item xs={12} md={10} lg={10} sx={{ p: 5 }}>
-                    <Title>Hey hey there! 😃</Title>
+                    <Title>Hey hey there! Welcome to Thi's Projects Page 😃</Title>
                     <Typography>
                         <p>I'm currently knee-deep in a whirlwind of projects involving TypeScript, React.js, and the magical d3.js, and I can hardly wait to spill the beans on them! 🌟 </p>
 

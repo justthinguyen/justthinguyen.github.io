@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material';
-import { fullName, ThiResume } from '../contents/MyInfo';
+import { ThiResume } from '../contents/MyInfo';
+import { getPageTitle } from '../siteInfo';
 import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../types';
 import { insertLink } from '../utils';
 import { Caption, PlainLink, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
@@ -98,7 +99,7 @@ export default function ResumePage() {
     return (
         <>
             <Helmet>
-                <title>{fullName} - {pageName}</title>
+                <title>{getPageTitle(pageName)}</title>
             </Helmet>
             <Grid container spacing={2}>
                 <Grid item xs={0} md={0.5} lg={0.5}></Grid>
