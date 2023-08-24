@@ -22,9 +22,7 @@ export default function ProjectPage() {
 
                         <p>So, what's the scoop, you ask? Well, stay tuned, because the fun's just getting started! 🎉 </p>
 
-                        <p> P.S: Have you noticed that ChatGPT assisted me in crafting those upbeat paragraphs above?
-                            I'm currently utilizing it while coding and am eager to integrate it into my projects.
-                            I'm incredibly excited about AI and can't wait to see what I can create with it! 🤩 </p>
+                        <p> ~ Thi ~</p>
                     </Typography>
                 </Grid>
                 <Grid item xs={0} md={1} lg={1}></Grid>
