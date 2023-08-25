@@ -33,7 +33,11 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
             },
             text: {
                 primary: '#fbf4f7' //'#ffcdd2', '#ffebee',
-            }
+            },
+            background: {
+                default: '#181717',
+                paper: '#161414',
+            },
         }),
     },
     typography: {
