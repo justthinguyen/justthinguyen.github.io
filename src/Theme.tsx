@@ -24,7 +24,7 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
             }
         } : {
             primary: {
-                main: '#B73A65',
+                main: '#C56183',
                 contrastText: '#fbf4f7',
             },
             secondary: {
@@ -32,11 +32,11 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
                 contrastText: '#1d2547',
             },
             text: {
-                primary: '#fbf4f7' //'#ffcdd2', '#ffebee',
+                primary: '#fff' //'#ffcdd2', '#ffebee',
             },
             background: {
-                default: '#181717',
-                paper: '#161414',
+                default: '#2c2828',
+                paper: '#201d1d',
             },
         }),
     },
