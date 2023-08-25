@@ -41,7 +41,7 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
         }),
     },
     typography: {
-        fontFamily: 'Montserrat, Droid Sans, Roboto'//'"DomaineText",Georgia,serif',
+        fontFamily: 'Helvetica, Arial, sans-serif'
     }
 });
 
