@@ -40,17 +40,17 @@ export const HeaderSX = {
     lineHeight: 1.6,
 }
 
-export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx={SubtitleSX}>{ps.children}</Typography>
-export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX}>{ps.children}</Typography>
-export const Header = (ps: TypographyProps) => <Typography variant="h5" sx={HeaderSX} color={ps.color}>{ps.children}</Typography>
-export const Title = (ps: TypographyProps) => <Typography variant="h6" sx={TitleSX} color={ps.color}>{ps.children}</Typography>
+export const Subtitle = (ps: TypographyProps) => <Typography component='span' sx={SubtitleSX} {...ps}>{ps.children}</Typography>
+export const Caption = (ps: TypographyProps) => <Typography component='span' sx={CaptionSX} {...ps}>{ps.children}</Typography>
+export const Header = (ps: TypographyProps) => <Typography variant="h5" sx={HeaderSX} {...ps}>{ps.children}</Typography>
+export const Title = (ps: TypographyProps) => <Typography variant="h6" sx={TitleSX} {...ps}>{ps.children}</Typography>
 
 export const PlainLinkSX = {
     textDecoration: 'none',
     ':hover': { 'textDecoration': 'underline' },
 }
 
-export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} href={ps.href} target={ps.target}>{ps.children}</Link>
+export const PlainLink = (ps: LinkProps) => <Link sx={PlainLinkSX} {...ps}>{ps.children}</Link>
 
 export const MediaButton = (ps: LinkProps) => (
     <Tooltip title={ps.title} placement="top">
