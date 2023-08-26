@@ -32,10 +32,10 @@ const themeOptions = (mode: PaletteMode): ThemeOptions =>
                 contrastText: '#1d2547',
             },
             text: {
-                primary: '#fff' //'#ffcdd2', '#ffebee',
+                primary: '#c9b3b3' //'#ffcdd2', '#ffebee',
             },
             background: {
-                default: '#2c2828',
+                default: '#151313',
                 paper: '#201d1d',
             },
         }),
