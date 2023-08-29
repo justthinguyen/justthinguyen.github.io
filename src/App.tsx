@@ -16,10 +16,15 @@ const helmetContext = {};
 const ThemeContext = createContext('light');
 
 export default function App() {
+    const storedTheme = (localStorage.getItem('themeColor') ?? 'light') as PaletteMode;
     const [showMoveUpButton, setShowMoveUpButton] = useState(false);
-    const [themeColor, setThemeColor] = useState<PaletteMode>('light');
+    const [themeColor, setThemeColor] = useState<PaletteMode>(storedTheme);
     const [mobileOpen, setMobileOpen] = useState(false);
     const theme = themeColor === 'light' ? lightTheme : darkTheme;
+
+    useEffect(() => {
+        localStorage.setItem('themeColor', JSON.stringify(themeColor))
+    }, [themeColor])
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
