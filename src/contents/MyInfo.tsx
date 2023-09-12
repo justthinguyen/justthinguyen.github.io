@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { RouterLink } from '../components/Navigation';
 import { pagesKey } from '../siteInfo';
-import { IResume } from '../types';
+import { IResume } from '../customTypes';
 import { Header } from '../components/CustomizedMUI';
 
 export const mediaLink = {
