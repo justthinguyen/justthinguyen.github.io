@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/justthinguyen/static/css/main.ca043032.css",
+    "main.js": "/justthinguyen/static/js/main.14582b5b.js",
+    "index.html": "/justthinguyen/index.html",
+    "main.ca043032.css.map": "/justthinguyen/static/css/main.ca043032.css.map",
+    "main.14582b5b.js.map": "/justthinguyen/static/js/main.14582b5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca043032.css",
+    "static/js/main.14582b5b.js"
+  ]
+}
