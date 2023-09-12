@@ -25,7 +25,7 @@ export default function Home() {
                             borderRadius: '5%'
                         }}
                         alt="ThiNguyen-profile-pic"
-                        src="public/img/ThiNguyen-08-2023.jpeg"
+                        src="img/ThiNguyen-08-2023.jpeg"
                     >
                     </Box>
 
