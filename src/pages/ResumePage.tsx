@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Badge, Box, Chip, Grid, Typography, Button, Link } from '@mui/material';
 import { ThiResume } from '../contents/MyInfo';
 import { getPageTitle } from '../siteInfo';
-import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../types';
+import { ISkills, IWorkHistory, IEducationHistory, IResume } from '../customTypes';
 import { insertLink } from '../utils';
 import { Caption, PlainLink, Subtitle, TextTooltip, TextStack, Title } from '../components/CustomizedMUI';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
