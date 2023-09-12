@@ -7,8 +7,8 @@ import { Header } from '../components/CustomizedMUI';
 export const mediaLink = {
     'Github': 'https://github.com/ngthing',
     'LinkedIn': 'https://www.linkedin.com/in/ngthinguyen',
-    'EmailMe': 'mailto:thi@justthinguyen.com',
-    'Email': 'thi@justthinguyen.com'
+    'EmailMe': 'mailto:justthinguyen@gmail.com',
+    'Email': 'justthinguyen@gmail.com'
 };
 
 export const resumeLink = 'https://docs.google.com/document/d/1bYqGHmOM8DATNu2_mWSpdYh5Wyx66q35fQAcQBuUwxY/edit?usp=sharing';
