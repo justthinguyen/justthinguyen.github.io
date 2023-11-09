@@ -23,7 +23,7 @@ export default function App() {
     const theme = themeColor === 'light' ? lightTheme : darkTheme;
 
     useEffect(() => {
-        localStorage.setItem('themeColor', JSON.stringify(themeColor))
+        localStorage.setItem('themeColor', themeColor)
     }, [themeColor])
 
     useEffect(() => {
