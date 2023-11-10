@@ -6,10 +6,10 @@ export type PageInfo = {
 };
 export const pagesKey: { [key: string]: PageInfo; } = {
     'coding': { name: 'Coding', path: '/coding' },
-    'project': { name: 'Projects', path: '/project' },
+    'toolkits': { name: 'Toolkits', path: '/toolkits' },
+    // 'project': { name: 'Projects', path: '/project' },
     'resume': { name: 'Resume', path: '/resume' },
     'blog': { name: 'Thoughts', path: '/blog' },
-    // 'work': { name: 'Work with Me', path: '/work-with-me' }
 }
 
 export const navItems = Object.values(pagesKey).map(o => o.name);

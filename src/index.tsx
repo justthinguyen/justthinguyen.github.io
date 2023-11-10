@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import CodingPage from './pages/CodingPage';
 import ResumePage from './pages/ResumePage';
-import ProjectPage from './pages/ProjectPage';
+import ToolkitsPage from './pages/ToolkitsPage';
 import Blog from './pages/Blog';
 import App from './App';
 import { pagesKey } from './siteInfo';
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
                 <Route index element={<Home />} />
                 <Route path={pagesKey['coding']['path']} element={<CodingPage />} />
                 <Route path={pagesKey['blog']['path']} element={<Blog />} />
-                <Route path={pagesKey['project']['path']} element={<ProjectPage />} />
+                <Route path={pagesKey['toolkits']['path']} element={<ToolkitsPage />} />
                 <Route path={pagesKey['resume']['path']} element={<ResumePage />} />
             </Route>
         </Route>
