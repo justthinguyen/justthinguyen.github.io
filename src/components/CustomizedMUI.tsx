@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
-import { Stack, Typography, TypographyProps, IconButton, Link, LinkProps, Tooltip } from '@mui/material';
+import { Button, Stack, Typography, TypographyProps, IconButton, Link, LinkProps, Tooltip } from '@mui/material';
 
 export const TextTooltip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} classes={{ popper: className }} />
@@ -65,3 +65,11 @@ export const MediaButton = (ps: LinkProps) => (
         </IconButton >
     </Tooltip>
 );
+export const CardLinkButton = (ps: LinkProps) => (
+    <Button size="small">
+        <Link sx={{ textDecoration: 'none' }}
+            target='_blank'
+            href={ps.href}>{ps.children}
+        </Link>
+    </Button>
+)

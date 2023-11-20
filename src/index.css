@@ -37,3 +37,7 @@ code {
     right: 0%;
     position: fixed;
 }
+
+.ToolkitCard {
+    max-width: 450px;
+}
