@@ -1,6 +1,6 @@
-# Thi Nguyen's Website. 👩🏻‍💻 🤗
+# simple website
 
-This project is a perpetual rollercoaster, and new things will just keep piling up for extra excitement! 🎢🚀
+A simple website built with React, TypeScript, React Router and MUI
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
